@@ -1,98 +1,81 @@
+<div align="center">
+
 # 🔒 API Vault
 
-**Manage your API keys with style!** API Vault brings a beautiful, intuitive interface right into VS Code, making it easier than ever to organize and access your API keys.
+**Manage your API keys directly in VS Code — encrypted, organized, one-click access.**
 
-![API Vault Demo](api-vault-ui.png)
+API Vault stores your keys in the system keychain (macOS Keychain / Windows Credential Vault / Linux libsecret) and surfaces them in a clean side-panel UI so you stop pasting keys into Notes.app.
 
-### 🎯 Organized & Secure
-Keep your API keys neatly organized in collapsible categories:
-- 🌥️ Cloud Services (AWS, Azure)
+[![Marketplace](https://img.shields.io/badge/VS_Code-Marketplace-007ACC?logo=visualstudiocode)](https://marketplace.visualstudio.com)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![Stars](https://img.shields.io/github/stars/joewilsonai/VSCode-API-Vault_Extension?style=social)](https://github.com/joewilsonai/VSCode-API-Vault_Extension/stargazers)
+
+![API Vault UI](api-vault-ui.png)
+
+</div>
+
+---
+
+## Why
+
+You have 30 API keys across 12 services. They live in:
+
+- A `.env` file you accidentally committed once
+- Apple Notes
+- A Google Doc called *"keys.doc"*
+- Slack DMs to yourself
+- Your password manager's "miscellaneous" folder
+
+**API Vault gives you one place** — a VS Code side panel — that lives inside your editor and stores everything in your OS keychain.
+
+## Features
+
+### 🎯 Organized
+Categorize keys however you want. Default categories:
+
+- ☁️ Cloud Services (AWS, Azure, GCP)
 - 💳 Payment APIs (Stripe, PayPal)
 - 🔗 Social Media (Twitter, Facebook)
-- 🤖 AI & ML (OpenAI, HuggingFace)
+- 🤖 AI & ML (OpenAI, Anthropic, HuggingFace)
 - 🛠️ Development Tools (GitHub, GitLab)
 
-## ✨ What's New in 4.3.1
+### 🔐 Encrypted by default
+- Stored in the **system keychain** — macOS Keychain, Windows Credential Vault, Linux libsecret
+- **Never plain-text on disk**
+- **No cloud sync** — your keys stay on your machine
 
-We've supercharged API Vault with amazing improvements:
+### ⚡ Fast
+- **One-click copy** straight into your editor
+- **Quick search** with `⌘/Ctrl+F`
+- **Create categories** with `⌘/Ctrl+Shift+N`
+- **Compact mode** with `⌘/Ctrl+Shift+C`
+- **Drag-and-drop** keys between categories
 
-- 🚀 **Lightning-Fast Interface** - Instant key visibility and smoother updates
-- 🎯 **Smart Loading States** - Beautiful loading indicators and empty states
-- 📱 **Enhanced Compact Mode** - More keys at a glance (⌘/Ctrl+Shift+C)
-- ⌨️ **Power User Shortcuts**:
-  - Create categories instantly (⌘/Ctrl+Shift+N)
-  - Quick search access (⌘/Ctrl+F)
-- 🎨 **Polished UI** - Better visual feedback and animations
-- 💾 **Rock-Solid Reliability** - Improved state management and key preservation
-- 🔄 **Seamless Updates** - Optimized refresh handling for a butter-smooth experience
+## Install
 
-## 🚀 Features
+### From the VS Code Marketplace
 
-### 🎯 Everything Where You Need It
-- **Access keys instantly** without switching contexts
-- **Copy with one click** directly into your code
-- **Search and filter** to find keys quickly
-- All your keys are **just a keystroke away**
+1. Open Extensions in VS Code (`⌘/Ctrl+Shift+X`)
+2. Search for **API Vault**
+3. Click Install
 
-### 🔐 Bank-Grade Security
-- Keys are stored in your **system's secure keychain**
-- **Zero plain-text storage** - everything is encrypted
-- **No cloud sync** - your keys stay on your machine
-- Follows security best practices
+### From source
 
-### 🎨 Smart Organization
-- **Collapsible categories** for a clean workspace
-- **Drag-and-drop** keys and categories anywhere
-- **Custom categories** for perfect organization
-- **Visual management** that makes sense
+```bash
+git clone https://github.com/joewilsonai/VSCode-API-Vault_Extension
+cd VSCode-API-Vault_Extension
+npm install
+npm run package
+code --install-extension api-vault-*.vsix
+```
 
-### 🚀 Perfect Integration
-- **Native VS Code UI** - feels right at home
-- **Keyboard shortcuts** for power users
-- **Command palette** integration
-- **Explorer view** for quick access
+## Usage
 
-## 🎮 Getting Started
+1. Open the API Vault side panel (icon appears in the activity bar after install)
+2. Click **+ New Key**
+3. Enter name, value, and category
+4. Click any key to copy — the key never leaves your keychain except into your clipboard
 
-1. Install API Vault from the VS Code Marketplace
-2. Click the vault icon in the Activity Bar
-3. Start adding your API keys!
+## License
 
-## ⌨️ Commands
-
-- `API Vault: Store Key` - Add a new API key
-- `API Vault: Get Key` - Retrieve and copy a key
-- `API Vault: List Keys` - View all stored keys
-
-## 🛡️ Security
-
-API Vault uses your system's secure keychain (Keychain Access on macOS, Credential Manager on Windows, libsecret on Linux) to store your API keys. The keys are:
-
-- ✅ **Encrypted at rest**
-- ✅ **Protected by your system's security**
-- ✅ **Never stored in plain text**
-- ✅ **Never synced to the cloud**
-
-## 🎯 Perfect For
-
-- **Developers** managing multiple API keys
-- **Teams** working with various services
-- **Students** learning to use APIs
-- **Anyone** who values security and convenience
-
-## 📝 Feedback & Contributions
-
-Love API Vault? Give it a ⭐️ on GitHub! Found a bug or have a feature request? [Open an issue](https://github.com/PoliTwit1984/VSCode-API-Vault_Extension/issues)!
-
-## 🌟 Share the Love
-
-If API Vault has made your development workflow easier, consider sharing it with your fellow developers:
-- Share on [Twitter](https://twitter.com/intent/tweet?text=Check%20out%20API%20Vault%20for%20VS%20Code!%20The%20most%20beautiful%20and%20secure%20way%20to%20manage%20your%20API%20keys%20right%20in%20your%20editor%20%F0%9F%94%90%20https://marketplace.visualstudio.com/items?itemName=PoliTwit1984.api-vault)
-- Share on [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://marketplace.visualstudio.com/items?itemName=PoliTwit1984.api-vault)
-- Tell your team about it!
-
-Every share helps more developers discover a better way to manage their API keys.
-
-## 📜 License
-
-MIT License - feel free to use in your own projects!
+MIT
